@@ -2,6 +2,7 @@ group 'feedback-api'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'distribution'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 
@@ -40,11 +41,15 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.10'
-    distributionUrl = "https\\://services.gradle.org/distributions/gradle-$gradleVersion-bin.zip"
+    gradleVersion = '4.10.2'
 }
 
 test {
     useJUnitPlatform()
-    systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
+}
+
+jar {
+    manifest {
+        attributes('Main-Class': 'ru.feedback.FeedbackApplication')
+    }
 }

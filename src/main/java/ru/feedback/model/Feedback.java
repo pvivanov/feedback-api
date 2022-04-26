@@ -1,6 +1,5 @@
 package ru.feedback.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.Expose;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,9 +12,9 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "notes")
+@Table(name = "feedback")
 @EntityListeners(AuditingEntityListener.class)
-public class Note {
+public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -49,9 +49,6 @@ dependencies {
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
-//task wrapper(type: Wrapper) {
-//    gradleVersion = '7.5.1'
-//}
 
 test {
     useJUnitPlatform()

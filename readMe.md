@@ -2,7 +2,7 @@
 Spring Boot, MySQL, JPA, Hibernate
 
 ### Presets and setup steps
-* install jdk8
+* install jdk11
 * install lombok plugin
 * customize lombok plugin (Build, Execution, Deployment --> Compiler --> Annotation Processors, Enable annotation processing)
 * Setup MySQL & Create Mysql database
